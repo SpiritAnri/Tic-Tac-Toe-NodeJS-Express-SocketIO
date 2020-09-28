@@ -14,10 +14,10 @@ let unmatchedPlayerId
 
 //app.use(express.static(__dirname + '/../node_modules/'))
 
-// app.get('/', (req, res) => {
-//   const stream = fs.createReadStream(__dirname + '/../client/index.html')
-//   stream.pipe(res)
-// })
+app.get('/', (req, res) => {
+  const stream = fs.createReadStream(__dirname + '/../client/index.html')
+  stream.pipe(res)
+})
 
 // When a client connects
 io.on('connection', function (socket) {
